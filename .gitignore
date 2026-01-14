@@ -239,10 +239,3 @@ wandb/
 mlruns/
 .env*
 
-.opencode/
-.qwen/
-
-.specify/**
-
-specs/**
-QWEN.md

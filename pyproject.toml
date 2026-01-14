@@ -1,0 +1,110 @@
+[project]
+name = "time-series-session-task"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiogram>=3.0.0",
+    "yfinance>=0.2.18",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.3.0",
+    "statsmodels>=0.14.0",
+    "torch>=2.0.0",
+    "matplotlib>=3.7.0",
+    "python-dotenv>=1.0.0",
+    "prophet>=1.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.1.6",
+    "pyright>=1.1.355",
+    "pytest>=7.4.0",
+]
+
+[tool.ruff]
+# Same as Black
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.12
+target-version = "py312"
+
+[tool.ruff.lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`) codes by default.
+select = [
+    "E4",
+    "E7",
+    "E9",
+    "F",
+    "I",
+    "PL",
+    "PT",
+    "PYI",
+    "RUF",
+    "UP",
+    "W",
+]
+extend-ignore = [
+    "PLR",  # Design related pylint codes
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Enable auto-detection of line endings.
+line-ending = "auto"
+
+[tool.pyright]
+include = ["src"]
+exclude = [
+    "**/node_modules",
+    "**/__pycache__",
+    "src/experimental",
+    "src/typestubs",
+]
+extraPaths = ["src"]
+
+# Strict type checking
+reportMissingImports = true
+reportMissingTypeStubs = false
+reportUnknownMemberType = false
+reportPrivateUsage = false

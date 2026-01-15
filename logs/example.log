@@ -1,0 +1,86 @@
+Importing plotly failed. Interactive plots will not work.
+2026-01-15 07:44:33,747 - src.services.data_loader - INFO - DataLoaderService initialized
+2026-01-15 07:44:33,747 - src.utils.cache_manager - INFO - Cache manager initialized with directory: .cache/models
+2026-01-15 07:44:33,756 - src.main - INFO - Starting the Stock Forecast Telegram Bot...
+2026-01-15 07:44:33,756 - aiogram.dispatcher - INFO - Start polling
+2026-01-15 07:44:33,888 - aiogram.dispatcher - INFO - Run polling for bot @educational_forecast_bot id=8587584103 - 'forecast_bot_educational'
+2026-01-15 07:45:22,972 - src.i18n.loader - INFO - Loaded 109 messages for language 'ru'
+2026-01-15 07:45:22,973 - src.i18n.loader - INFO - Loaded 109 messages for language 'en'
+2026-01-15 07:45:22,973 - src.i18n.loader - INFO - Loaded 109 messages for language 'ru'
+2026-01-15 07:45:22,973 - src.i18n.loader - INFO - Loaded 109 messages for language 'en'
+2026-01-15 07:45:23,154 - src.handlers.language_selection - INFO - Existing user 156526102 started, language: ru
+2026-01-15 07:45:23,154 - aiogram.event - INFO - Update id=47478990 is handled. Duration 181 ms by bot id=8587584103
+2026-01-15 07:46:16,630 - src.i18n.loader - INFO - Loaded 109 messages for language 'ru'
+2026-01-15 07:46:16,630 - src.i18n.loader - INFO - Loaded 109 messages for language 'en'
+2026-01-15 07:46:16,630 - src.utils.catalog_cache - INFO - CatalogCache initialized with catalog path: /home/gna/workspase/education/MEPHI/time_series_session_task/src/config/catalog.csv
+2026-01-15 07:46:16,630 - src.services.catalog_service - INFO - CatalogService initialized
+2026-01-15 07:46:16,631 - src.utils.catalog_cache - ERROR - Error loading catalog from /home/gna/workspase/education/MEPHI/time_series_session_task/src/config/catalog.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 4
+
+2026-01-15 07:46:16,631 - src.utils.catalog_cache - INFO - Loading default catalog with top 10 stocks
+2026-01-15 07:46:16,631 - src.utils.catalog_cache - INFO - Loaded 10 default stocks
+2026-01-15 07:46:16,700 - src.handlers.stocks_handler - INFO - Displayed stocks list to user 156526102
+2026-01-15 07:46:16,700 - aiogram.event - INFO - Update id=47478991 is handled. Duration 70 ms by bot id=8587584103
+2026-01-15 07:46:31,697 - aiogram.event - INFO - Update id=47478992 is handled. Duration 73 ms by bot id=8587584103
+2026-01-15 07:46:40,596 - src.i18n.loader - INFO - Loaded 109 messages for language 'ru'
+2026-01-15 07:46:40,596 - src.i18n.loader - INFO - Loaded 109 messages for language 'en'
+2026-01-15 07:46:40,596 - src.main - INFO - Received request from user 156526102: AAPL 1000
+2026-01-15 07:46:40,777 - src.services.data_loader - INFO - Downloading historical data for AAPL from 2024-01-16 to 2026-01-15
+2026-01-15 07:46:42,223 - src.services.data_loader - INFO - Successfully downloaded 502 records for AAPL
+2026-01-15 07:46:42,293 - src.services.forecasting - INFO - Generating forecast for AAPL using 502 historical data points
+2026-01-15 07:46:42,293 - src.models.model_selector - INFO - Starting training of all models...
+2026-01-15 07:46:42,295 - src.utils.cache_manager - INFO - Loaded neural network model from cache: .cache/models/AAPL_LSTM.pt
+2026-01-15 07:46:42,295 - src.models.neural_networks - INFO - Loaded LSTM model from cache for AAPL
+2026-01-15 07:46:42,295 - src.models.model_selector - INFO - Trained LSTM in 0.00s
+2026-01-15 07:46:42,295 - src.models.model_selector - INFO - Model LSTM training completed successfully
+2026-01-15 07:46:42,295 - src.utils.cache_manager - INFO - Loaded neural network model from cache: .cache/models/AAPL_GRU.pt
+2026-01-15 07:46:42,295 - src.models.neural_networks - INFO - Loaded GRU model from cache for AAPL
+2026-01-15 07:46:42,295 - src.models.model_selector - INFO - Trained GRU in 0.00s
+2026-01-15 07:46:42,295 - src.models.model_selector - INFO - Model GRU training completed successfully
+2026-01-15 07:46:42,296 - src.utils.cache_manager - INFO - Loaded neural network model from cache: .cache/models/AAPL_RNN.pt
+2026-01-15 07:46:42,296 - src.models.neural_networks - INFO - Loaded RNN model from cache for AAPL
+2026-01-15 07:46:42,296 - src.models.model_selector - INFO - Trained RNN in 0.00s
+2026-01-15 07:46:42,296 - src.models.model_selector - INFO - Model RNN training completed successfully
+2026-01-15 07:46:42,296 - src.models.statistical - INFO - Training ARIMA model with order (1, 1, 1)...
+/home/gna/workspase/education/MEPHI/time_series_session_task/.venv/lib/python3.12/site-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+/home/gna/workspase/education/MEPHI/time_series_session_task/.venv/lib/python3.12/site-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+/home/gna/workspase/education/MEPHI/time_series_session_task/.venv/lib/python3.12/site-packages/statsmodels/tsa/base/tsa_model.py:473: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+  self._init_dates(dates, freq)
+2026-01-15 07:46:42,310 - src.models.statistical - INFO - ARIMA model trained. RMSE: 8.8992, MAPE: 1.3392%, MAE: 2.8211
+2026-01-15 07:46:42,310 - src.models.statistical - INFO - Training ETS model with error=add, trend=add, seasonal=add...
+/home/gna/workspase/education/MEPHI/time_series_session_task/.venv/lib/python3.12/site-packages/statsmodels/base/model.py:607: ConvergenceWarning: Maximum Likelihood optimization failed to converge. Check mle_retvals
+  warnings.warn("Maximum Likelihood optimization failed to "
+2026-01-15 07:46:42,324 - src.models.statistical - INFO - ETS model trained. RMSE: 3.7721, MAPE: 1.6549%, MAE: 3.0857
+2026-01-15 07:46:42,324 - src.models.statistical - INFO - Training Prophet model...
+2026-01-15 07:46:42,331 - prophet - INFO - Disabling yearly seasonality. Run prophet with yearly_seasonality=True to override this.
+2026-01-15 07:46:42,331 - prophet - INFO - Disabling daily seasonality. Run prophet with daily_seasonality=True to override this.
+2026-01-15 07:46:42,337 - cmdstanpy - INFO - Chain [1] start processing
+2026-01-15 07:46:42,370 - cmdstanpy - INFO - Chain [1] done processing
+2026-01-15 07:46:42,401 - src.models.statistical - INFO - Prophet model trained. RMSE: 8.3432, MAPE: 2.8803%, MAE: 6.3980
+2026-01-15 07:46:42,401 - src.models.model_selector - INFO - Trained statistical models in 0.11s
+2026-01-15 07:46:42,401 - src.models.model_selector - INFO - Completed training of all models
+2026-01-15 07:46:42,401 - src.models.model_selector - INFO - Selected ETS as the best model with composite score: 8.5127
+2026-01-15 07:46:42,401 - src.models.model_selector - INFO - Best model metrics - RMSE: 3.7721, MAE: 3.0857, MAPE: 1.6549%
+2026-01-15 07:46:42,408 - src.models.statistical - WARNING - ETS forecast returned all NaN, using last known price
+Invalid MIT-MAGIC-COOKIE-1 key
+2026-01-15 07:46:42,545 - src.services.forecasting - INFO - Forecast generated successfully for AAPL. Best model: ETS
+2026-01-15 07:46:42,621 - src.services.trading_strategy - INFO - Generating trading recommendations with investment amount: $1,000.00
+2026-01-15 07:46:42,621 - src.services.trading_strategy - INFO - Identifying optimal buy/sell days based on forecast data
+2026-01-15 07:46:42,622 - src.services.trading_strategy - INFO - Identified 5 buy signals and 5 sell signals
+2026-01-15 07:46:42,622 - src.services.trading_strategy - INFO - Trading recommendations generated successfully
+2026-01-15 07:46:42,700 - src.services.profit_calculator - INFO - Performing detailed profit analysis
+2026-01-15 07:46:42,700 - src.services.profit_calculator - INFO - Calculating profit for investment amount: $1,000.00
+2026-01-15 07:46:42,700 - src.services.profit_calculator - INFO - Profit calculation completed. Profit: $72.74, ROI: 7.27%
+2026-01-15 07:46:42,700 - src.services.profit_calculator - INFO - Detailed profit analysis completed
+2026-01-15 07:46:43,762 - request_logger - INFO - user_id=156526102 | timestamp=2026-01-15T07:46:43.762615 | ticker=AAPL | investment_amount=1000.0 | selected_model=ETS | metrics={'rmse': np.float64(3.772103063837483), 'mae': np.float64(3.0856661810876873), 'mape': np.float64(1.6549044613396506)} | profit_estimate=72.73777432303291 | volatility_assessment=False
+2026-01-15 07:46:43,762 - src.main - INFO - Successfully processed request for user 156526102, ticker AAPL
+2026-01-15 07:46:43,762 - aiogram.event - INFO - Update id=47478993 is handled. Duration 3166 ms by bot id=8587584103
+2026-01-15 07:47:42,167 - src.handlers.language_selection - INFO - Help command from user 156526102
+2026-01-15 07:47:42,245 - src.handlers.language_selection - INFO - Displayed help to user 156526102, language: ru
+2026-01-15 07:47:42,245 - aiogram.event - INFO - Update id=47478994 is handled. Duration 77 ms by bot id=8587584103
+2026-01-15 07:48:15,880 - src.handlers.language_selection - INFO - User 156526102 requested language change, current: ru
+2026-01-15 07:48:15,880 - aiogram.event - INFO - Update id=47478995 is handled. Duration 216 ms by bot id=8587584103
+^C2026-01-15 07:49:10,944 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-01-15 07:49:10,944 - aiogram.dispatcher - INFO - Polling stopped for bot @educational_forecast_bot id=8587584103 - 'forecast_bot_educational'
+2026-01-15 07:49:10,944 - aiogram.dispatcher - INFO - Polling stopped

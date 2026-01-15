@@ -239,3 +239,4 @@ wandb/
 mlruns/
 .env*
 
+!example.log

@@ -19,6 +19,7 @@ dependencies = [
     "matplotlib>=3.7.0",
     "python-dotenv>=1.0.0",
     "prophet>=1.1.0",
+    "apscheduler>=3.11.2",
 ]
 
 [tool.setuptools.packages.find]

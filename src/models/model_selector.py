@@ -210,10 +210,12 @@ class ModelSelector:
             mae = result.get("mae", float("inf"))
             mape = result.get("mape", float("inf"))
 
+            # Skip models with infinite or NaN metrics
+            if rmse == float("inf") or rmse != rmse or mape != mape:  # NaN check
+                logger.warning(f"Skipping {model_name} due to invalid metrics")
+                continue
+
             # Normalize metrics to 0-1 scale based on the best performer
-            # Lower values are better for all metrics
-            if rmse == float("inf"):
-                continue  # Skip models with infinite error
 
             # Calculate a composite score (lower is better)
             # RMSE, MAE, and MAPE are all error metrics (lower is better)
@@ -278,7 +280,14 @@ class ModelSelector:
             if self.selected_model_name == "ARIMA":
                 return self.statistical_models.predict_arima(steps=forecast_days)
             elif self.selected_model_name == "ETS":
-                return self.statistical_models.predict_ets(steps=forecast_days)
+                last_price = (
+                    self._training_data.iloc[-1]
+                    if self._training_data is not None
+                    else None
+                )
+                return self.statistical_models.predict_ets(
+                    steps=forecast_days, last_price=last_price
+                )
         elif self.selected_model_name == "Prophet":
             # Prophet returns a dataframe, we need just the values
             forecast_df = self.statistical_models.predict_prophet(periods=forecast_days)

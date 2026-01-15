@@ -1,0 +1,107 @@
+# Stock Catalog for Stock Forecast Telegram Bot
+# Top 100 most actively traded US stocks
+# Format: CSV (per constitution IV)
+# Generated: 2026-01-15
+# Last Updated: 2026-01-15
+
+ticker,name,sector,last_updated
+AAPL,Apple Inc.,Technology,2026-01-15
+MSFT,Microsoft Corporation,Technology,2026-01-15
+GOOGL,Alphabet Inc.,Technology,2026-01-15
+AMZN,Amazon.com Inc.,Consumer Cyclical,2026-01-15
+TSLA,Tesla Inc.,Consumer Cyclical,2026-01-15
+META,Meta Platforms Inc.,Technology,2026-01-15
+NVDA,NVIDIA Corporation,Technology,2026-01-15
+JPM,JPMorgan Chase & Co.,Financial Services,2026-01-15
+V,Visa Inc.,Financial Services,2026-01-15
+JNJ,Johnson & Johnson,Healthcare,2026-01-15
+WMT,Walmart Inc.,Consumer Defensive,2026-01-15
+PG,Procter & Gamble Co.,Consumer Defensive,2026-01-15
+MA,Mastercard Inc.,Financial Services,2026-01-15
+UNH,UnitedHealth Group Inc.,Healthcare,2026-01-15
+HD,The Home Depot Inc.,Consumer Cyclical,2026-01-15
+DIS,The Walt Disney Company,Communication Services,2026-01-15
+BAC,Bank of America Corp.,Financial Services,2026-01-15
+ADBE,Adobe Inc.,Technology,2026-01-15
+CRM,Salesforce Inc.,Technology,2026-01-15
+NFLX,Netflix Inc.,Communication Services,2026-01-15
+PFE,Pfizer Inc.,Healthcare,2026-01-15
+T,AT&T Inc.,Communication Services,2026-01-15
+CSCO,Cisco Systems Inc.,Technology,2026-01-15
+PEP,PepsiCo Inc.,Consumer Defensive,2026-01-15
+KO,Coca-Cola Co.,Consumer Defensive,2026-01-15
+NKE,Nike Inc.,Consumer Cyclical,2026-01-15
+MRK,Merck & Co. Inc.,Healthcare,2026-01-15
+ABT,Abbott Laboratories,Healthcare,2026-01-15
+TMO,Thermo Fisher Scientific Inc.,Healthcare,2026-01-15
+COST,Costco Wholesale Corporation,Consumer Defensive,2026-01-15
+ACN,Accenture plc,Technology,2026-01-15
+AVGO,Broadcom Inc.,Technology,2026-01-15
+DHR,Danaher Corp.,Healthcare,2026-01-15
+TXN,Texas Instruments Inc.,Technology,2026-01-15
+NEE,NextEra Energy Inc.,Utilities,2026-01-15
+MCD,McDonald's Corp.,Consumer Cyclical,2026-01-15
+WFC,Wells Fargo & Co.,Financial Services,2026-01-15
+LIN,Linde plc,Basic Materials,2026-01-15
+PM,Philip Morris International Inc.,Consumer Defensive,2026-01-15
+HON,Honeywell International Inc.,Industrials,2026-01-15
+UPS,United Parcel Service Inc.,Industrials,2026-01-15
+IBM,International Business Machines Corp.,Technology,2026-01-15
+AMD,Advanced Micro Devices Inc.,Technology,2026-01-15
+ORCL,Oracle Corp.,Technology,2026-01-15
+CAT,Caterpillar Inc.,Industrials,2026-01-15
+BA,Boeing Co.,Industrials,2026-01-15
+GS,Goldman Sachs Group Inc.,Financial Services,2026-01-15
+SPGI,S&P Global Inc.,Financial Services,2026-01-15
+MMM,3M Co.,Industrials,2026-01-15
+GE,General Electric Co.,Industrials,2026-01-15
+CVX,Chevron Corp.,Energy,2026-01-15
+BLK,BlackRock Inc.,Financial Services,2026-01-15
+NOW,ServiceNow Inc.,Technology,2026-01-15
+SLB,Schlumberger Ltd.,Energy,2026-01-15
+AMGN,Amgen Inc.,Healthcare,2026-01-15
+LOW,Lowe's Companies Inc.,Consumer Cyclical,2026-01-15
+UNP,Union Pacific Corp.,Industrials,2026-01-15
+LMT,Lockheed Martin Corp.,Industrials,2026-01-15
+RTX,RTX Corp.,Industrials,2026-01-15
+VRTX,Vertex Pharmaceuticals Inc.,Healthcare,2026-01-15
+BMY,Bristol-Myers Squibb Co.,Healthcare,2026-01-15
+DE,Deere & Co.,Industrials,2026-01-15
+ADP,Automatic Data Processing Inc.,Technology,2026-01-15
+TGT,Target Corp.,Consumer Cyclical,2026-01-15
+BKNG,Booking Holdings Inc.,Consumer Cyclical,2026-01-15
+ISRG,Intuitive Surgical Inc.,Healthcare,2026-01-15
+ZTS,Zoetis Inc.,Healthcare,2026-01-15
+MS,Morgan Stanley,Financial Services,2026-01-15
+SYK,Stryker Corp.,Healthcare,2026-01-15
+GILD,Gilead Sciences Inc.,Healthcare,2026-01-15
+CB,Chubb Ltd.,Financial Services,2026-01-15
+PLD,Prologis Inc.,Real Estate,2026-01-15
+CI,Cigna Group Inc.,Healthcare,2026-01-15
+MMC,Marsh McLennan Companies Inc.,Financial Services,2026-01-15
+SO,Southern Co.,Utilities,2026-01-15
+COF,Capital One Financial Corp.,Financial Services,2026-01-15
+BSX,Boston Scientific Corp.,Healthcare,2026-01-15
+CMI,Cummins Inc.,Industrials,2026-01-15
+FDX,FedEx Corp.,Industrials,2026-01-15
+EL,Estee Lauder Companies Inc.,Consumer Defensive,2026-01-15
+SHW,Sherwin-Williams Co.,Basic Materials,2026-01-15
+CVS,CVS Health Corp.,Healthcare,2026-01-15
+CL,Colgate-Palmolive Co.,Consumer Defensive,2026-01-15
+CSX,CSX Corp.,Industrials,2026-01-15
+BDX,Becton Dickinson and Co.,Healthcare,2026-01-15
+AON,Aon plc,Financial Services,2026-01-15
+WM,Waste Management Inc.,Industrials,2026-01-15
+F,Ford Motor Co.,Consumer Cyclical,2026-01-15
+MET,MetLife Inc.,Financial Services,2026-01-15
+USB,U.S. Bancorp,Financial Services,2026-01-15
+PNC,PNC Financial Services Group Inc.,Financial Services,2026-01-15
+AXP,American Express Co.,Financial Services,2026-01-15
+ALL,Allstate Corp.,Financial Services,2026-01-15
+NSC,Norfolk Southern Corp.,Industrials,2026-01-15
+GD,General Dynamics Corp.,Industrials,2026-01-15
+ETN,Eaton Corp.,Industrials,2026-01-15
+EMR,Emerson Electric Co.,Industrials,2026-01-15
+FIS,Fidelity National Information Services Inc.,Technology,2026-01-15
+MCK,McKesson Corp.,Healthcare,2026-01-15
+SNY,Sanofi,Healthcare,2026-01-15

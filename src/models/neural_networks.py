@@ -318,8 +318,10 @@ class NeuralNetworkModels:
                 predictions.append(next_pred_val)
 
                 # Update the sequence by removing the first element and adding the prediction
+                # next_pred shape: (1, 1), need to reshape to (1, 1, 1) to concatenate with (1, seq_len, 1)
+                next_pred_reshaped = next_pred.unsqueeze(1)  # (1, 1, 1)
                 current_seq = torch.cat(
-                    [current_seq[:, 1:, :], next_pred.unsqueeze(0).unsqueeze(-1)], dim=1
+                    [current_seq[:, 1:, :], next_pred_reshaped], dim=1
                 )
 
         # Inverse transform the predictions

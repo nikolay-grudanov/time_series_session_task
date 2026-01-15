@@ -4,18 +4,55 @@
 
 Этот документ описывает внутренний API Telegram-бота для прогнозирования акций, включая основные классы, методы и их использование.
 
+## Команды Telegram-бота
+
+| Команда | Описание | Файл |
+|---------|----------|------|
+| `/start` | Приветственное сообщение, выбор языка для новых пользователей | `src/handlers/language_selection.py` |
+| `/lang` | Изменить язык интерфейса (русский/английский) | `src/handlers/language_selection.py` |
+| `/help` | Показать справку по использованию бота | `src/handlers/language_selection.py` |
+| `/forecast <TICKER> <AMOUNT>` | Получить прогноз для акции | `src/main.py` |
+| `/stocks` | Показать список доступных акций | `src/handlers/stocks_handler.py` |
+| `/model_status` | Показать статус переобучения модели | `src/handlers/status_handler.py` |
+| `/retraining_history` | Показать историю переобучения | `src/handlers/status_handler.py` |
+
 ## Основные модули
 
-### 1. Основное приложение (`src/main.py`)
+### 1. Обработчики (`src/handlers/`)
+
+#### Language Selection (`src/handlers/language_selection.py`)
+
+##### Функции
+- `cmd_start(message)`: Обработчик команды /start
+- `cmd_language(message)`: Обработчик команды /lang
+- `cmd_help(message)`: Обработчик команды /help
+- `callback_language_selected(callback)`: Обработчик выбора языка
+- `send_language_selection(message, language)`: Отправка меню выбора языка
+
+#### Stocks Handler (`src/handlers/stocks_handler.py`)
+
+##### Функции
+- `cmd_stocks(message)`: Обработчик команды /stocks
+- `callback_stocks_page(callback)`: Пагинация списка акций
+- `callback_stock_selected(callback)`: Выбор акции из списка
+- `callback_stocks_search(callback)`: Поиск акций
+
+#### Status Handler (`src/handlers/status_handler.py`)
+
+##### Функции
+- `cmd_model_status(message)`: Обработчик команды /model_status
+- `cmd_retraining_history(message)`: Обработчик команды /retraining_history
+
+### 2. Основное приложение (`src/main.py`)
 
 #### Функции
 - `main()`: Точка входа для приложения
-- `send_welcome(message)`: Обработчик команды /start
-- `handle_forecast_request(message)`: Обработчик запросов прогноза
+- `cmd_forecast(message)`: Обработчик команды /forecast
 
 #### Эндпоинты
 - `/start`: Приветственное сообщение и инструкции по использованию
-- `Message Handler`: Обрабатывает символ тикера и сумму инвестиций
+- `/forecast <TICKER> <AMOUNT>`: Получить прогноз цены акции
+- Обработчик сообщений: Принимает формат `<ТИКЕР> <СУММА>` (без слеша)
 
 ### 2. Конфигурация (`src/config/settings.py`)
 
@@ -96,7 +133,7 @@
 
 ##### Методы
 - `identify_optimal_trades(forecast_data, historical_data, forecast_dates)`: Определяет оптимальные дни покупки/продажи на основе данных прогноза
-- `generate_trading_recommendations(forecast_data, forecast_dates, investment_amount)`: Генерирует комплексные торговые рекомендации
+- `generate_trading_recommendations(forecast_data, historical_data, forecast_dates, investment_amount)`: Генерирует комплексные торговые рекомендации
 - `calculate_potential_profits(buy_signals, sell_signals, investment_amount)`: Рассчитывает потенциальную прибыль от торговых сигналов
 
 #### Сервис расчета прибыли (`src/services/profit_calculator.py`)
